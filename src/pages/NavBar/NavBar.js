@@ -4,7 +4,7 @@ import './NavBar.css'
 function NavBar() {
  return (
   <div className='navbar'>
-   <div className='container'>
+   <div className='container flex'>
     <h1 className='logo'>Responsive Design</h1>
     <nav>
      <ul>
