@@ -1,6 +1,6 @@
 .navbar {
- background-color: #047aed;
- color: #fff;
+ background-color: var(--primary-color);
+ color: var(--greyText-color);
  height: 70px;
 }
 
@@ -13,13 +13,13 @@
 }
 
 .navbar a {
- color: #fff;
+ color: var(--greyText-color);
  padding: 10px;
  margin: 0 5px;
 }
 
 .navbar a:hover {
- border-bottom: 2px #fff solid;
+ border-bottom: 2px var(--greyText-color) solid;
 }
 .container {
  max-width: 1366px;

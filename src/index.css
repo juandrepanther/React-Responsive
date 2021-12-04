@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap');
 
+/*COLOR VARIABLES*/
+:root {
+ --primary-color: #047aed;
+ --greyText-color: #fff;
+}
+
 * {
  margin: 0;
  padding: 0;
