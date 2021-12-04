@@ -1,10 +1,11 @@
+import NavBar from './pages/NavBar/NavBar'
 
 function App() {
-  return (
-    <div className="App">
-      Hello App
-    </div>
-  );
+ return (
+  <div className='App'>
+   <NavBar />
+  </div>
+ )
 }
 
-export default App;
+export default App
