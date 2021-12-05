@@ -18,6 +18,7 @@
 } */
 .showcase .grid {
  overflow: visible;
+ grid-template-columns: repeat(2, 1fr);
 }
 
 .showcase form {
@@ -65,50 +66,4 @@
  font-weight: 900;
  background-clip: text;
  color: transparent;
-}
-
-/*UTILITIES CLASSES*/
-.btn {
- display: inline-block;
- padding: 10px 30px;
- cursor: pointer;
- background-color: var(--primary-color);
- border: none;
- border-radius: 5px;
- color: var(--greyText-color);
-}
-
-.btn:hover {
- transform: scale(1.03);
-}
-.btn:active {
- transform: scale(0.95);
-}
-
-.grid {
- display: grid;
- /*repeat two times 1 fraction*/
- grid-template-columns: repeat(2, 1fr);
- gap: 20px;
- justify-content: center;
- align-items: center;
- height: 100%;
-}
-
-.card {
- background-color: white;
- border-radius: 10px;
- padding: 20px;
- margin: 10px;
- clip-path: polygon(
-  50% 0%,
-  100% 0,
-  100% 47%,
-  100% 71%,
-  68% 100%,
-  32% 100%,
-  0 100%,
-  0 46%,
-  0 0
- );
 }

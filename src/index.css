@@ -5,6 +5,9 @@
  --primary-color: #047aed;
  --greyText-color: #fff;
  --border-color: #b4becb;
+ --secondary-color: #1c3fa8;
+ --dark-color: #002240;
+ --light-color: #f4f4f4;
 }
 
 * {
@@ -34,6 +37,9 @@ h2 {
  line-height: 1.2;
  margin: 10px 0;
 }
+h3 {
+ font-weight: 400;
+}
 
 p {
  margin: 10px 0;
@@ -41,4 +47,169 @@ p {
 
 img {
  width: 100%;
+}
+
+/*UTILITIES CLASSES*/
+.btn {
+ display: inline-block;
+ padding: 10px 30px;
+ cursor: pointer;
+ background-color: var(--primary-color);
+ border: none;
+ border-radius: 5px;
+ color: var(--greyText-color);
+}
+
+.btn:hover {
+ transform: scale(1.03);
+}
+.btn:active {
+ transform: scale(0.95);
+}
+
+.grid {
+ display: grid;
+ /*repeat two times 1 fraction*/
+ gap: 20px;
+
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+.grid-3 {
+ grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+ background-color: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 10px;
+}
+.polygon {
+ clip-path: polygon(
+  50% 0%,
+  100% 0,
+  100% 47%,
+  100% 71%,
+  68% 100%,
+  32% 100%,
+  0 100%,
+  0 46%,
+  0 0
+ );
+}
+
+.shadow {
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container {
+ max-width: 1366px;
+ margin: 0 auto;
+ overflow: auto;
+ padding: 0 40px;
+}
+
+.flex {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+.text-center {
+ text-align: center;
+}
+
+/*MARGINS*/
+
+.my-1 {
+ margin: 1rem 0;
+}
+.my-2 {
+ margin: 1.5rem 0;
+}
+.my-3 {
+ margin: 2rem 0;
+}
+.my-4 {
+ margin: 3rem 0;
+}
+.my-5 {
+ margin: 4rem 0;
+}
+
+.m-1 {
+ margin: 1rem;
+}
+.m-2 {
+ margin: 1.5rem;
+}
+.m-3 {
+ margin: 2rem;
+}
+.m-4 {
+ margin: 3rem;
+}
+.m-5 {
+ margin: 4rem;
+}
+
+/*PADDINGS*/
+
+.py-1 {
+ margin: 1rem 0;
+}
+.py-2 {
+ margin: 1.5rem 0;
+}
+.py-3 {
+ margin: 2rem 0;
+}
+.py-4 {
+ margin: 3rem 0;
+}
+.py-5 {
+ margin: 4rem 0;
+}
+
+.p-1 {
+ padding: 1rem;
+}
+.p-2 {
+ padding: 1.5rem;
+}
+.p-3 {
+ padding: 2rem;
+}
+.p-4 {
+ padding: 3rem;
+}
+.p-5 {
+ padding: 4rem;
+}
+
+/*BACKGROUND and COLORED BUTTONS*/
+
+.bg-primary,
+.btn-primary {
+ background-color: var(--primary-color);
+ color: #fff;
+}
+.bg-secondary,
+.btn-secondary {
+ background-color: var(--secondary-color);
+ color: #fff;
+}
+.bg-dark,
+.btn-dark {
+ background-color: var(--dark-color);
+ color: #fff;
+}
+.bg-light,
+.btn-light {
+ background-color: var(--light-color);
+ color: #333;
 }

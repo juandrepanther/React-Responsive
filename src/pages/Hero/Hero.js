@@ -1,5 +1,7 @@
 import React from 'react'
-import ShowCase from '../ShowCase'
+import CliPage from '../CliPage/CliPage'
+import ShowCase from '../ShowCase/ShowCase'
+import Stats from '../Stats/Stats'
 import './Hero.css'
 
 function Hero() {
@@ -7,6 +9,8 @@ function Hero() {
   <div className='hero'>
    <div className='hero-container'>
     <ShowCase />
+    <Stats />
+    <CliPage />
    </div>
   </div>
  )
