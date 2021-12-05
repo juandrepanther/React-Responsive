@@ -2,13 +2,26 @@
  height: 400px;
  position: relative;
 }
+.clip-path-shadow-wrapper {
+ filter: drop-shadow(rgba(0, 0, 0, 0.24) 0px 3px 8px);
+}
+/* .showcase::before,
+.showcase::after {
+ content: '';
+ position: absolute;
+ height: 100px;
+ bottom: -70px;
+ right: 0;
+ left: 0;
+ background: white;
+ transform: skewY(-3deg);
+} */
 .showcase .grid {
  overflow: visible;
 }
 
 .showcase form {
  position: relative;
- top: 60px;
  height: 250px;
  width: 400px;
  /* padding: 40px; */
@@ -30,6 +43,12 @@
  font-size: 16px;
 }
 
+.showcase-form input:focus {
+ outline: none;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
 .showcase h1 {
  font-size: 40px;
 }
@@ -48,6 +67,24 @@
  color: transparent;
 }
 
+/*UTILITIES CLASSES*/
+.btn {
+ display: inline-block;
+ padding: 10px 30px;
+ cursor: pointer;
+ background-color: var(--primary-color);
+ border: none;
+ border-radius: 5px;
+ color: var(--greyText-color);
+}
+
+.btn:hover {
+ transform: scale(1.03);
+}
+.btn:active {
+ transform: scale(0.95);
+}
+
 .grid {
  display: grid;
  /*repeat two times 1 fraction*/
@@ -59,9 +96,19 @@
 }
 
 .card {
- background-color: #fff;
+ background-color: white;
  border-radius: 10px;
- box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  padding: 20px;
  margin: 10px;
+ clip-path: polygon(
+  50% 0%,
+  100% 0,
+  100% 47%,
+  100% 71%,
+  68% 100%,
+  32% 100%,
+  0 100%,
+  0 46%,
+  0 0
+ );
 }
