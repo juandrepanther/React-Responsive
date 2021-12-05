@@ -2,6 +2,33 @@
  height: 400px;
  position: relative;
 }
+.showcase .grid {
+ overflow: visible;
+}
+
+.showcase form {
+ position: relative;
+ top: 60px;
+ height: 250px;
+ width: 400px;
+ /* padding: 40px; */
+ z-index: 100;
+ /*justify-self align in self container*/
+ /* justify-self: flex-start; */
+}
+
+.showcase-form .form-control {
+ margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+ border: 0;
+ border-bottom: 1px solid var(--border-color);
+ width: 100%;
+ padding: 3px;
+ font-size: 16px;
+}
 
 .showcase h1 {
  font-size: 40px;

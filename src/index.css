@@ -4,6 +4,7 @@
 :root {
  --primary-color: #047aed;
  --greyText-color: #fff;
+ --border-color: #b4becb;
 }
 
 * {
