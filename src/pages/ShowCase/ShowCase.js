@@ -12,6 +12,7 @@ function ShowCase() {
       deployment much easier than before! Fill the form and get our feedback
       within never!
      </p>
+     <div className='background-clip-text'>BACKGROUND-CLIP</div>
     </div>
     <div className='showcase-form card'>
      <h2>Request a Demo</h2>

@@ -6,6 +6,20 @@
 .showcase h1 {
  font-size: 40px;
 }
+.showcase h1::first-letter {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 80px;
+ font-weight: 900;
+}
+
+.background-clip-text {
+ background-image: url('../../assets/images/light-sky.jpg');
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 50px;
+ font-weight: 900;
+ background-clip: text;
+ color: transparent;
+}
 
 .grid {
  display: grid;
