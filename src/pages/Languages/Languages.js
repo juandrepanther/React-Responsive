@@ -1,5 +1,6 @@
 import React from 'react'
 import './Languages.css'
+import LanguagesCards from '../../components/LanguagesCards'
 
 //IMAGES
 
@@ -21,17 +22,8 @@ function Languages() {
   Scala: ScalaImg,
   Clojure: ClojureImg,
  }
- //test
- const renderLanguages = () => {
-  return Object.entries(LanguagesImages).map((language, index) => {
-   return (
-    <div className='card' key={index}>
-     <h4>{language[0]}</h4>
-     <img src={language[1]} alt='' />
-    </div>
-   )
-  })
- }
+
+ const renderLanguages = () => <LanguagesCards languages={LanguagesImages} />
 
  return (
   <section className='languages'>

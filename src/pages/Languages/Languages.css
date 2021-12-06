@@ -7,3 +7,10 @@
 .languages .flex {
  flex-wrap: wrap;
 }
+.card {
+ transition: 1s;
+}
+.card:hover {
+ transform: rotateY(360deg);
+ cursor: pointer;
+}
