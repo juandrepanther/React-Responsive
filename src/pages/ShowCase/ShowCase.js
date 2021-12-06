@@ -14,7 +14,7 @@ function ShowCase() {
      </p>
      <div className='background-clip-text'>BACKGROUND-CLIP</div>
     </div>
-    <span class='clip-path-shadow-wrapper'>
+    <span className='clip-path-shadow-wrapper'>
      <div className='showcase-form card polygon'>
       <h2>Request a Demo</h2>
       <form action=''>
