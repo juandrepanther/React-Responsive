@@ -5,7 +5,7 @@ function NavBar() {
  return (
   <div className='navbar'>
    <div className='container flex'>
-    <h1 className='logo'>Responsive Design</h1>
+    <h1 className='logo'>Responsive</h1>
     <nav>
      <ul>
       <li>

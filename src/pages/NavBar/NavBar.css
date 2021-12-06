@@ -128,3 +128,23 @@
  border-bottom: 2px var(--greyText-color) solid;
 }
 
+@media (max-width: 768px) {
+ h1 {
+  font-size: 1.2rem;
+ }
+}
+@media (max-width: 500px) {
+ .navbar {
+  height: auto;
+  clip-path: none;
+ }
+
+ .navbar .flex {
+  flex-direction: column;
+ }
+
+ .navbar ul {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+ }
+}

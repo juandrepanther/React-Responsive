@@ -1,3 +1,10 @@
 .cloud .grid {
  grid-template-columns: 4fr 3fr;
 }
+
+@media (max-width: 768px) {
+ .cloud .grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+ }
+}

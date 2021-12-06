@@ -67,3 +67,29 @@
  background-clip: text;
  color: transparent;
 }
+
+@media (max-width: 768px) {
+ .showcase .grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+ }
+
+ .showcase {
+  height: auto;
+ }
+ .showcase-text {
+  text-align: center;
+  margin-top: 40px;
+ }
+ .showcase-form {
+  justify-self: center;
+  margin: auto;
+ }
+}
+
+@media (max-width: 500px) {
+ .showcase form {
+  width: 80%;
+  margin: auto;
+ }
+}
