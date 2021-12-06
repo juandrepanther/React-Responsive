@@ -21,7 +21,7 @@ function Languages() {
   Scala: ScalaImg,
   Clojure: ClojureImg,
  }
-
+ //test
  const renderLanguages = () => {
   return Object.entries(LanguagesImages).map((language, index) => {
    return (
