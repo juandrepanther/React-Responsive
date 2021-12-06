@@ -192,7 +192,14 @@ img {
 }
 
 /*BACKGROUND and COLORED BUTTONS*/
-
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+ color: #fff;
+}
 .bg-primary,
 .btn-primary {
  background-color: var(--primary-color);

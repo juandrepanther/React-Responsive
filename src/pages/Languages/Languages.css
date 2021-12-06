@@ -7,10 +7,15 @@
 .languages .flex {
  flex-wrap: wrap;
 }
-.card {
+.card.language {
  transition: 1s;
 }
-.card:hover {
+.card.language:hover {
  transform: rotateY(360deg);
  cursor: pointer;
+}
+
+.languages .card h4 {
+ font-size: 20px;
+ margin-bottom: 10px;
 }
