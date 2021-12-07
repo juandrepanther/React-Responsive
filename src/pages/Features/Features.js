@@ -1,8 +1,14 @@
 import React from 'react'
-import './Features.css'
+import Head from './Head/Head'
+import SubHead from './SubHead/SubHead'
 
 function Features() {
- return <div></div>
+ return (
+  <>
+   <Head />
+   <SubHead />
+  </>
+ )
 }
 
 export default Features

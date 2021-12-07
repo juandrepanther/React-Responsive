@@ -5,6 +5,7 @@ import Footer from './pages/Footer/Footer'
 //ROUTES
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Features from './pages/Features/Features'
 
 function App() {
  return (
@@ -12,6 +13,7 @@ function App() {
    <NavBar />
    <Routes>
     <Route path='/' element={<Home />} />
+    <Route path='/features' element={<Features />} />
    </Routes>
    <Footer />
   </Router>
