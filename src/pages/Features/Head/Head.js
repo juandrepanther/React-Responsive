@@ -5,7 +5,7 @@ import serverImage from '../../../assets/images/server.png'
 function Head() {
  return (
   <section className='features-head bg-primary'>
-   <div className='container'>
+   <div className='containerHead'>
     <div>
      <h1 className='xl'>Features</h1>
      <p className='lead'>

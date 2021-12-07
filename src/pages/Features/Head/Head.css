@@ -1,13 +1,13 @@
-.container .grid {
- grid-template-rows: 2fr;
-}
-
 .features-head img {
  width: 200px;
  justify-self: flex-end;
 }
 
-.container {
+.containerHead {
  display: flex;
  justify-content: space-between;
+ max-width: 1366px;
+ margin: 0 auto;
+ overflow: auto;
+ padding: 0 40px;
 }
