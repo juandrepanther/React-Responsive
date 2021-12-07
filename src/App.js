@@ -1,18 +1,20 @@
+import Home from './pages/Home/Home'
 import NavBar from './pages/NavBar/NavBar'
-import Hero from './pages/Hero/Hero'
-import Cloud from './pages/Cloud/Cloud'
-import Languages from './pages/Languages/Languages'
 import Footer from './pages/Footer/Footer'
+
+//ROUTES
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
  return (
-  <div className='App'>
+  <Router>
    <NavBar />
-   <Hero />
-   <Cloud />
-   <Languages />
+   <Routes>
+    <Route path='/' element={<Home />} />
+   </Routes>
    <Footer />
-  </div>
+  </Router>
  )
 }
 
