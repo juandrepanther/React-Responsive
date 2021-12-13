@@ -1,0 +1,92 @@
+/*CREATIVE CARD ANIMATION*/
+
+.demo-wrapper {
+ position: relative;
+ background-color: #fff;
+ border-radius: 20px;
+ width: 18.75em;
+ height: 25em;
+ /*IMPORTANT to set preserve-3d below and distance between user and z plane*/
+ transform-style: preserve-3d;
+ transform: perspective(1000px);
+ transition: 1s;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.demo-wrapper .imgBox {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+ transform-origin: left;
+ transform-style: preserve-3d;
+ transition: 1s;
+ background: rgb(168, 168, 168);
+ border-radius: 20px;
+}
+
+.demo-wrapper .imgBox img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transform-style: preserve-3d;
+ backface-visibility: hidden;
+ border-radius: 20px;
+}
+
+.demo-wrapper .imgBox img:nth-child(2) {
+ transform: rotateY(180deg);
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*ANIMATION HOVER MAGIC*/
+.demo-wrapper:hover {
+ transform: translateX(50%);
+}
+.demo-wrapper:hover .imgBox {
+ transform: rotateY(-180deg);
+}
+
+.details {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ padding: 20px;
+}
+
+.content {
+ flex-direction: column;
+}
+
+.content h2 {
+ text-align: center;
+ font: 700;
+ line-height: 1em;
+}
+.content span {
+ color: var(--light-color);
+ font-size: 0.8em;
+}
+.social-icons {
+ position: relative;
+ display: flex;
+ margin-top: 10px;
+}
+.social-icons a {
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.2s;
+}
+.social-icons a:hover {
+ background: #f2ddc1;
+ border-radius: 20px;
+}

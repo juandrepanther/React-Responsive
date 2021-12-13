@@ -2,6 +2,7 @@ import React from 'react'
 import './Demo.css'
 import faceImage from '../../assets/images/face1.jpg'
 import faceImage2 from '../../assets/images/face2.jpg'
+import Card from '../../components/Card/Card'
 
 function Demo() {
  return (
@@ -79,37 +80,19 @@ function Demo() {
      beatae sunt obcaecati ipsum?
     </div>
    </section>
-   <section className='Demo-container2 container flex'>
-    <div className='demo-wrapper'>
-     <div className='imgBox'>
-      <img src={faceImage} alt='' />
-      <img src={faceImage2} alt='' />
-     </div>
-     <div className='details flex'>
-      <div className='content flex'>
-       <h2>
-        Creative Card
-        <span>
-         <br></br>Graphics
-        </span>
-       </h2>
-       <div className='social-icons'>
-        <a href='/'>
-         <i class='fab fa-facebook'></i>
-        </a>
-        <a href='/'>
-         <i class='fab fa-twitter'></i>
-        </a>
-        <a href='/'>
-         <i class='fab fa-linkedin'></i>
-        </a>
-        <a href='/'>
-         <i class='fab fa-instagram'></i>
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
+   <section className='Demo-container2 container'>
+    <Card
+     img1={faceImage}
+     img2={faceImage2}
+     name={'Mr. Johnson'}
+     description={'Creative Designer'}
+    />
+    <Card
+     img1={faceImage2}
+     img2={faceImage}
+     name={'Mr. Stivensen'}
+     description={'Architect'}
+    />
    </section>
   </>
  )
