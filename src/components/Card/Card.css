@@ -21,7 +21,6 @@
  transform-origin: left;
  transform-style: preserve-3d;
  transition: 1s;
- background: rgb(168, 168, 168);
  border-radius: 20px;
 }
 
@@ -71,6 +70,8 @@
 .content span {
  color: var(--light-color);
  font-size: 0.8em;
+ color: black;
+ font-weight: 800;
 }
 .social-icons {
  position: relative;
@@ -89,4 +90,32 @@
 .social-icons a:hover {
  background: #f2ddc1;
  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+ .demo-wrapper:hover {
+  transform: none;
+ }
+ .demo-wrapper:hover .imgBox {
+  transform: none;
+  z-index: -1;
+ }
+
+ .demo-wrapper .imgBox img {
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  /* display: none;
+  background: transparent;
+  z-index: -1; */
+ }
+ .demo-wrapper .imgBox img:nth-child(2) {
+  display: none;
+  z-index: -1;
+ }
 }
