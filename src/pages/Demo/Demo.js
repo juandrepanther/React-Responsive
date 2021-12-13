@@ -3,6 +3,8 @@ import './Demo.css'
 import faceImage from '../../assets/images/face1.jpg'
 import faceImage2 from '../../assets/images/face2.jpg'
 import Card from '../../components/Card/Card'
+import Shoes from '../../components/Card/Shoes'
+import shoesImg from '../../assets/images/shoes1.png'
 
 function Demo() {
  return (
@@ -93,6 +95,9 @@ function Demo() {
      name={'Mr. Stivensen'}
      description={'Architect'}
     />
+   </section>
+   <section className='container flex'>
+    <Shoes image={shoesImg} />
    </section>
   </>
  )

@@ -1,0 +1,50 @@
+.container-shoes {
+ position: relative;
+ width: 300px;
+ height: 400px;
+ margin: 20px;
+ background-color: #f7f7f7;
+ border-radius: 20px;
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ flex-direction: column;
+ align-content: flex-start;
+}
+.container-shoes h1:nth-child(2) {
+ font-size: 2rem;
+}
+.container-shoes h1:nth-child(4) {
+ font-size: 1.5rem;
+ filter: blur(2px);
+}
+.shoes-text1 {
+ position: absolute;
+ top: 40%;
+ right: 20%;
+ z-index: 2;
+ padding: 5px 20px;
+ background-color: #26262e;
+ border-radius: 30px;
+ border: 1px solid #26262e;
+ color: #fff;
+ cursor: pointer;
+}
+.imgBx .flex {
+ align-content: flex-start;
+}
+
+.card-shoes {
+ width: 100%;
+ height: 100%;
+ position: relative;
+ transition: 0.5s ease-in-out;
+ z-index: 3;
+}
+
+.card-shoes:hover {
+ transform: translateY(-50px) rotate(-15deg) translate(-10px, -10px);
+}
+
+.imgBox img {
+ max-width: 100%;
+ position: relative;
+}
