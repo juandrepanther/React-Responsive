@@ -1,10 +1,12 @@
-import React from 'react'
+import { Suspense, lazy } from 'react'
 import './Demo.css'
 import faceImage from '../../assets/images/face1.jpg'
 import faceImage2 from '../../assets/images/face2.jpg'
-import Card from '../../components/Card/Card'
+// import Card from '../../components/Card/Card'
 import Shoes from '../../components/Card/Shoes'
 import shoesImg from '../../assets/images/shoes1.png'
+
+const Card = lazy(() => import('../../components/Card/Card'))
 
 function Demo() {
  return (
@@ -83,18 +85,20 @@ function Demo() {
     </div>
    </section>
    <section className='Demo-container2 container'>
-    <Card
-     img1={faceImage}
-     img2={faceImage2}
-     name={'Mr. Johnson'}
-     description={'Creative Designer'}
-    />
-    <Card
-     img1={faceImage2}
-     img2={faceImage}
-     name={'Mr. Stivensen'}
-     description={'Architect'}
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+     <Card
+      img1={faceImage}
+      img2={faceImage2}
+      name={'Mr. Johnson'}
+      description={'Creative Designer'}
+     />
+     <Card
+      img1={faceImage2}
+      img2={faceImage}
+      name={'Mr. Stivensen'}
+      description={'Architect'}
+     />
+    </Suspense>
    </section>
    <section className='container flex'>
     <Shoes image={shoesImg} />

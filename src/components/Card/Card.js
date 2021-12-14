@@ -6,8 +6,8 @@ function Card(props) {
  return (
   <div className='demo-wrapper'>
    <div className='imgBox'>
-    <img src={img2} alt='Cannot Load' />
-    <img src={img1} alt='Cannot Load' />
+    <img src={img2} alt='Cannot Load' loading='lazy' />
+    <img src={img1} alt='Cannot Load' loading='lazy' />
    </div>
    <div className='details flex'>
     <div className='content flex'>

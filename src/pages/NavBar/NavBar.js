@@ -10,19 +10,13 @@ function NavBar() {
     <nav>
      <ul>
       <li>
-       <Link to='/'>
-        <a href='/'>Home</a>
-       </Link>
+       <Link to='/'>Home</Link>
       </li>
       <li>
-       <Link to='/features'>
-        <a href='/'>Features</a>
-       </Link>
+       <Link to='/features'>Features</Link>
       </li>
       <li>
-       <Link to='/documents'>
-        <a href='/'>Documents</a>
-       </Link>
+       <Link to='/documents'>Documents</Link>
       </li>
      </ul>
     </nav>

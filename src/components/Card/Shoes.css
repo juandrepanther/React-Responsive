@@ -14,7 +14,8 @@
 }
 .container-shoes h1:nth-child(4) {
  font-size: 1.5rem;
- filter: blur(2px);
+ filter: blur(0.1px);
+ animation: 2s changeBlur infinite ease-in-out;
 }
 .shoes-text1 {
  position: absolute;
@@ -47,4 +48,19 @@
 .imgBox img {
  max-width: 100%;
  position: relative;
+}
+
+@keyframes changeBlur {
+ 0% {
+  filter: blur(0px);
+ }
+ 25% {
+  filter: blur(0.5px);
+ }
+ 50% {
+  filter: blur(1px);
+ }
+ 75% {
+  filter: blur(1.5px);
+ }
 }
