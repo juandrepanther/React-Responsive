@@ -2,6 +2,8 @@ import React from 'react'
 import './CliPage.css'
 import cliImage from '../../assets/images/cli.png'
 
+
+
 function CliPage() {
  return (
   <section className='cli'>

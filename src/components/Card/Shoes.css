@@ -8,7 +8,9 @@
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
  flex-direction: column;
  align-content: flex-start;
+ transition: 2s all ease;
 }
+
 .container-shoes h1:nth-child(2) {
  font-size: 2rem;
 }

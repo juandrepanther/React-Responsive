@@ -4,6 +4,8 @@ import ShowCase from '../ShowCase/ShowCase'
 import Stats from '../Stats/Stats'
 import './Hero.css'
 
+
+
 function Hero() {
  return (
   <div className='hero'>
