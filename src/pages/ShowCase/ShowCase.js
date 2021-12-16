@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ShowCase.css'
 
 function ShowCase() {
+ const name = useRef()
+
+ const nameHandler = (e) => (name.current = e.target.value)
+
+ const submitHandler = (e) => {
+  e.preventDefault()
+  alert(name.current)
+  e.target.reset()
+ }
+
+ const keyPressHandler = (e) => {
+  e.key === 'Enter' && submitHandler()
+ }
+
  return (
   <section className='showcase'>
    <div className='container grid'>
@@ -17,9 +31,15 @@ function ShowCase() {
     <span className='clip-path-shadow-wrapper'>
      <div className='showcase-form card polygon'>
       <h2>Request a Demo</h2>
-      <form action=''>
+      <form action='' onSubmit={submitHandler}>
        <div className='form-control'>
-        <input type='text' name='name' placeholder='Name' required />
+        <input
+         type='text'
+         name='name'
+         placeholder='Name'
+         required
+         onChange={nameHandler}
+        />
        </div>
        <div className='form-control'>
         <input type='text' name='company' placeholder='Company Name' required />
@@ -27,7 +47,12 @@ function ShowCase() {
        <div className='form-control'>
         <input type='email' name='email' placeholder='Email' required />
        </div>
-       <input type='submit' value='Send' className='btn btn-primary' />
+       <input
+        type='submit'
+        value='Send'
+        className='btn btn-primary'
+        onKeyPress={keyPressHandler}
+       />
       </form>
      </div>
     </span>
