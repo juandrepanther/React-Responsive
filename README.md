@@ -1,5 +1,5 @@
-SELF-MADE TASKS for developing this responsible Web Page Template:
+Has Been Used:
 
-- create Features Page
-- create Documents Page
-- make it responsible for mobile devices
+- AOS
+- Three JS
+- React.memo()
