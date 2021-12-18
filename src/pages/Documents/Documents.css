@@ -18,6 +18,8 @@
 }
 .header-wrapper {
  display: flex;
+ width: 100%;
+ justify-content: center;
 }
 .animation-block h3:first-letter {
  font-size: 5rem;
@@ -33,6 +35,13 @@
  height: auto;
  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  animation: fadeIn 1.7s ease-in-out;
+}
+
+.visible {
+ visibility: visible;
+}
+.hidden {
+ visibility: hidden;
 }
 
 @keyframes fadeIn {
