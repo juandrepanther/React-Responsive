@@ -12,9 +12,7 @@ function ShowCase() {
   e.target.reset()
  }
 
- const keyPressHandler = (e) => {
-  e.key === 'Enter' && submitHandler()
- }
+ const keyPressHandler = (e) => e.key === 'Enter' && submitHandler()
 
  return (
   <section className='showcase'>

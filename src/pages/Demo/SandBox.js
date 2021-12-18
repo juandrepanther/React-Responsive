@@ -33,14 +33,26 @@ console.log(Object.is(obj1, objFreeze))
 
 //codewars Sum of Digits / Digital Root
 
-function digital_root(n = 91) {
-//  let result = 0
+function digital_root(n = 135) {
+ let result = 0
 
-//  String(n).split('').map(num => result += Number(num))
+ String(n).split('').map(num => result += Number(num))
 
-//  return result > 10 ? digital_root(result) : result
+ return result > 10 ? digital_root(result) : result
 
-console.log((n-1)%9+1)
+//console.log((n-1)%9+1)
 }
 
-digital_root()
+console.log(digital_root())
+
+
+const number1 = 300
+
+const number2 = 600
+
+
+function sum(num1, num2) {
+    return num1 + num2
+}
+
+console.log(sum(number1, number2))
