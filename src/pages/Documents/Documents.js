@@ -1,5 +1,6 @@
-import React, { Suspense, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 import texture1 from '../../assets/textures/texture1.jpg'
@@ -14,7 +15,11 @@ function Documents() {
   // Set up state for the hovered and active state
   const [active, setActive] = useState(false)
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
+  useFrame((state, delta) =>
+   !active
+    ? (mesh.current.rotation.x += 0.01)
+    : (mesh.current.rotation.x -= 0.01)
+  )
   // Return view, these are regular three.js elements expressed in JSX
   return (
    <mesh
@@ -24,7 +29,7 @@ function Documents() {
     onClick={(event) => setActive(!active)}>
     <boxGeometry args={[1, 1, 1]} />
     <meshStandardMaterial map={texture} />
-    <sphereGeometry args={[1, 32]} />
+    <sphereGeometry args={[1, 33]} />
    </mesh>
   )
  }
@@ -32,10 +37,11 @@ function Documents() {
   <div className='canvas container'>
    Hello Three.Js
    <Canvas>
+    <OrbitControls />
     <ambientLight />
-    <pointLight position={[10, 10, 10]} />
+    <pointLight position={[10, -20, 10]} />
     <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.8, 2, -3]} />
+    <Box position={[1.8, 2, -0]} />
    </Canvas>
   </div>
  )
