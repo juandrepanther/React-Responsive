@@ -1,6 +1,11 @@
 const obj1 = { id: 1, name: 'Janis' }
 const objFreeze = obj1
 const obj2 = { id: 2, name: 'Doe', surname: 'Hellix' }
+const arr4 = [
+ { id: 1, name: 'Doeghg', surname: 'Hellixjhjh' },
+ { id: 2, name: 'Doegfg', surname: 'Hellix' },
+ { id: 3, name: 'Doeds', surname: 'Hellix' },
+]
 const arr1 = [
  [1, 2],
  ['5', '6'],
@@ -36,23 +41,28 @@ console.log(Object.is(obj1, objFreeze))
 function digital_root(n = 135) {
  let result = 0
 
- String(n).split('').map(num => result += Number(num))
+ String(n)
+  .split('')
+  .map((num) => (result += Number(num)))
 
  return result > 10 ? digital_root(result) : result
 
-//console.log((n-1)%9+1)
+ //console.log((n-1)%9+1)
 }
 
 console.log(digital_root())
-
 
 const number1 = 300
 
 const number2 = 600
 
-
 function sum(num1, num2) {
-    return num1 + num2
+ return num1 + num2
 }
 
-console.log(sum(number1, number2))
+//console.log(sum(number1, number2))
+const result = {}
+
+arr4.map(object=> result[Math.random()] = object)
+
+console.table(result)
