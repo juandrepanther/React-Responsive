@@ -6,6 +6,7 @@ import TypeText from '../../components/TypeText'
 import Button from '../../components/Button/Button'
 
 //const GeometryComponent = React.memo(() => <Geometry />)
+const ButtonComponent = React.memo(() => <Button>Click Me</Button>)
 
 function Documents() {
  const [isVisible, setVisible] = useState('hidden')
@@ -41,7 +42,7 @@ function Documents() {
      numquam libero ipsam earum impedit consectetur nobis unde asperiores
      accusantium, vero!
     </h3>
-    <Button>Click Me</Button>
+    <ButtonComponent />
    </div>
   </div>
  )
