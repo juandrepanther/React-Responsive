@@ -24,7 +24,6 @@ function Documents() {
 
  return (
   <div className='canvas container'>
-   Hello Three.Js
    {/* <GeometryComponent /> */}
    <div className='animation-block'>
     <img src={face2} alt='' className='logo' />
