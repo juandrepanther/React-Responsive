@@ -1,0 +1,47 @@
+.btn2 {
+ display: block;
+ overflow: hidden;
+ position: relative;
+ border: none;
+ text-decoration: none;
+ outline: none;
+ background-color: #95d1cc;
+ border-radius: 20px;
+ color: white;
+ font-size: 3rem;
+ text-align: center;
+ cursor: pointer;
+ padding: 10px;
+ margin: 10px;
+ animation: 0.1s ease-in-out;
+}
+
+.btn2:hover {
+ background-color: #4fbdb4;
+ transition: 0.3s;
+ transform: translateY(-5px);
+ color: black;
+}
+
+.btn2:active {
+ background-color: #88aca9;
+}
+
+.btn2:after {
+ position: absolute;
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 61% 100%);
+ content: '';
+ top: 0;
+ right: 0;
+ width: 40%;
+ height: 100%;
+ background-color: #fdf4f4;
+ opacity: 0.5;
+}
+
+.btn2:hover:after {
+ transition: 0.1s;
+ color: rgb(163, 163, 163);
+ width: 100%;
+ clip-path: none;
+}

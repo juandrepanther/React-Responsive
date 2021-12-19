@@ -1,7 +1,3 @@
-.canvas canvas {
- height: 60vh;
-}
-
 .animation-block {
  display: flex;
  flex-direction: column;
@@ -27,6 +23,7 @@
 }
 .animation-block h3 {
  text-align: justify;
+ animation: fadeInText 0.7s ease-in;
 }
 
 .animation-block img {
@@ -61,6 +58,14 @@
  }
  100% {
   width: 0%;
+ }
+}
+@keyframes fadeInText {
+ 0% {
+  opacity: 0%;
+ }
+ 100% {
+  opacity: 100%;
  }
 }
 
