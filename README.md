@@ -9,6 +9,6 @@ Has Been Used:
 - grid
 - submit input with key "Enter"
 - vanilla CSS animations with keyframes
-- media querries
+- media queries
 - react-router-dom v6
 - created own hook useOnScreen() with useEffect and useState hooks, new IntersectionObserver() for getting status if element is on ViewPort for future animations etc.
