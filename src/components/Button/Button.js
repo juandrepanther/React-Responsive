@@ -5,7 +5,6 @@ import useOnScreen from '../../hooks/useOnScreen'
 function Button(props) {
  const { children } = props
  const [setRef, visible] = useOnScreen({ rootMargin: '-30px' })
- console.log(visible ? true : false)
  return (
   <button
    ref={setRef}

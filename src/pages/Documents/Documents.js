@@ -4,8 +4,9 @@ import './Documents.css'
 //import Geometry from '../../threeJS/Geometry/Geometry'
 import TypeText from '../../components/TypeText'
 import Button from '../../components/Button/Button'
-import useFetch from '../../hooks/useFetch'
+
 import ShowHideText from '../../components/ShowHideText'
+import RenderImages from '../../components/RenderImages'
 
 //MEMOIZATION OF COMPONENTS & FUNCTIONS
 //const GeometryComponent = React.memo(() => <Geometry />)
@@ -13,10 +14,6 @@ const ButtonComponent = React.memo(() => <Button>Click Me</Button>)
 const ShowHideFunction = React.memo(() => ShowHideText('|', 'h1'))
 
 function Documents() {
- const url = 'https://api.imgflip.com/get_memes'
- const [data] = useFetch(url)
- console.log(data)
-
  return (
   <div className='canvas container'>
    {/* <GeometryComponent /> */}
@@ -38,6 +35,7 @@ function Documents() {
     </h3>
     <ButtonComponent />
    </div>
+   <RenderImages url='https://api.imgflip.com/get_memes' />
   </div>
  )
 }
