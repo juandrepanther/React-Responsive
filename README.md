@@ -2,6 +2,7 @@ Has Been Used:
 
 - AOS library
 - Three JS
+- react-html-parser
 - React.memo() and Suspense for re-render only child Components (optimization)
 - useEffect with setInterval and clearInterval
 - responsive images

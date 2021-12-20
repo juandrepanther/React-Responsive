@@ -1,27 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import face2 from '../../assets/images/face2.png'
 import './Documents.css'
 //import Geometry from '../../threeJS/Geometry/Geometry'
 import TypeText from '../../components/TypeText'
 import Button from '../../components/Button/Button'
+import useFetch from '../../hooks/useFetch'
+import ShowHideText from '../../components/ShowHideText'
 
+//MEMOIZATION OF COMPONENTS & FUNCTIONS
 //const GeometryComponent = React.memo(() => <Geometry />)
 const ButtonComponent = React.memo(() => <Button>Click Me</Button>)
+const ShowHideFunction = React.memo(() => ShowHideText('|', 'h1'))
 
 function Documents() {
- const [isVisible, setVisible] = useState('hidden')
-
- useEffect(() => {
-  const interval = setInterval(() => {
-   if (isVisible === 'hidden') {
-    setVisible('visible')
-   } else {
-    setVisible('hidden')
-    clearInterval(interval)
-   }
-  }, 1000)
-  return () => clearInterval(interval)
- }, [isVisible])
+ const url = 'https://api.imgflip.com/get_memes'
+ const [data] = useFetch(url)
+ console.log(data)
 
  return (
   <div className='canvas container'>
@@ -32,7 +26,7 @@ function Documents() {
      <h1 className='header-text'>
       <TypeText letters='Mrs. Jasson Harley' seconds={100} />
      </h1>
-     <h1 className={isVisible}>|</h1>
+     <ShowHideFunction />
     </div>
 
     <h3 className='main-text'>
