@@ -1,17 +1,30 @@
-import React from 'react'
-import useOnScreen from '../hooks/useOnScreen'
+import React, { useRef, useState } from 'react'
+import useIntersection from '../hooks/useOnScreen'
+import './RenderOneImage.css'
 
-function RenderOneImage({ url }) {
- const [setRef, visible] = useOnScreen({ rootMargin: '-30px' })
+function RenderOneImage({ url, width, height }) {
+ const imgRef = useRef()
+ const [isInView, setIsInView] = useState(false)
 
- console.log('Problem with starting 3x rendering. Where?', visible)
+ useIntersection(imgRef, () => {
+  setIsInView(true)
+ })
  return (
-  <img
-   ref={setRef}
-   style={{ maxWidth: '100%', height: 'auto' }}
-   src={url}
-   alt='Loading'
-  />
+  <div ref={imgRef}>
+   {
+    <>
+     <div
+      className='image-placeholder'
+      ref={imgRef}
+      style={{
+       paddingBottom: `${(height / width) * 100}%`,
+       width: '100%',
+      }}>
+      {isInView && <img className='lazy-images' src={url} alt='' />}
+     </div>
+    </>
+   }
+  </div>
  )
 }
 

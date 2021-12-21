@@ -1,10 +1,10 @@
 import React from 'react'
 import './Button.css'
-import useOnScreen from '../../hooks/useOnScreen'
+import { useOnScreen } from '../../hooks/useOnScreen'
 
 function Button(props) {
  const { children } = props
- const [setRef, visible] = useOnScreen({ rootMargin: '-30px' })
+ const [setRef, visible] = useOnScreen()
  return (
   <button
    ref={setRef}

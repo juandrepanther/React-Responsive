@@ -14,6 +14,7 @@ const ButtonComponent = React.memo(() => <Button>Click Me</Button>)
 const ShowHideFunction = React.memo(() => ShowHideText('|', 'h1'))
 
 function Documents() {
+ console.log('Documents render')
  return (
   <div className='canvas container'>
    {/* <GeometryComponent /> */}
