@@ -6,7 +6,7 @@ import TypeText from '../../components/TypeText'
 import Button from '../../components/Button/Button'
 
 import ShowHideText from '../../components/ShowHideText'
-import RenderImages from '../../components/RenderImages'
+import RenderImages from '../../components/RenderImages/RenderImages'
 
 //MEMOIZATION OF COMPONENTS & FUNCTIONS
 //const GeometryComponent = React.memo(() => <Geometry />)

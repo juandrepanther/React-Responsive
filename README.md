@@ -12,4 +12,5 @@ Has Been Used:
 - vanilla CSS animations with keyframes
 - media queries
 - react-router-dom v6
-- created own hook useOnScreen() with useEffect and useState hooks, new IntersectionObserver() for getting status if element is on ViewPort for future animations etc.
+- created own hook useOnScreen() with useEffect and useState hooks, new IntersectionObserver() for getting status if element is on ViewPort for future animations etc. 
+- created lazy images loading with useOnScreen() hook other exported function. It is important, that it works with placeholder and just simply refer to img Component it`s gonna wont work like that. Explore RenderOneImage component and its CSS file for better understanding.

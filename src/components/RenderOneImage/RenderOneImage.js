@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import useIntersection from '../hooks/useOnScreen'
+import useIntersection from '../../hooks/useOnScreen'
 import './RenderOneImage.css'
 
 function RenderOneImage({ url, width, height }) {
@@ -12,7 +12,7 @@ function RenderOneImage({ url, width, height }) {
  return (
   <div ref={imgRef}>
    {
-    <>
+    <div className='lazy-image-container'>
      <div
       className='image-placeholder'
       ref={imgRef}
@@ -20,9 +20,10 @@ function RenderOneImage({ url, width, height }) {
        paddingBottom: `${(height / width) * 100}%`,
        width: '100%',
       }}>
+      {' '}
       {isInView && <img className='lazy-images' src={url} alt='' />}
      </div>
-    </>
+    </div>
    }
   </div>
  )

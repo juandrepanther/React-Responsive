@@ -1,5 +1,5 @@
-import useFetch from '../hooks/useFetch'
-import RenderOneImage from './RenderOneImage'
+import useFetch from '../../hooks/useFetch'
+import RenderOneImage from '../RenderOneImage/RenderOneImage'
 import './RenderImages.css'
 
 function RenderImages({ url }) {
